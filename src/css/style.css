@@ -7,18 +7,29 @@ header {
   align-items: center;
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
-  width: 136px;
-  height: 29px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.title {
+  color: #14212b;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .date {
-  color: var(--text-text-default, #5f6e76);
-
-  /* display-medium16 */
-  font-family: "Pretendard Variable";
+  color: #5f6e76;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 137.5% */
+  line-height: 22px;
 }
