@@ -33,3 +33,41 @@ header {
   font-weight: 500;
   line-height: 22px;
 }
+
+.auto-rolling-news-bar {
+  display: flex;
+  margin: 0 auto;
+  width: 930px;
+  height: 49px;
+  justify-content: space-between;
+}
+
+.auto-rolling-news {
+  display: flex;
+  width: 461px;
+  height: 49px;
+  background-color: #f5f7f9;
+  border: 1px solid #d2dae0;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.news-1-contents {
+  position: relative;
+  list-style-type: none;
+  width: 100px;
+}
+
+.news-1-contents li {
+  height: 51px;
+}
+
+.news-2-contents {
+  position: relative;
+  list-style-type: none;
+  width: 100px;
+}
+
+.news-2-contents li {
+  height: 51px;
+}
