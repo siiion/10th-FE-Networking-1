@@ -92,40 +92,32 @@ export function createRoller(rollerSelector) {
   // 복제된 롤러가 롤링을 이어가도록
   newsRollerInterval = setInterval(newsRoller, 5000);
 
-  // // 마우스 호버 이벤트
-  // rollerItems.forEach((item) => {
-  //   item.addEventListener("mouseenter", () => {
-  //     console.log(`[${rollerSelector}] mouseenter`);
-  //     clearInterval(newsRollerInterval);
-  //     clearInterval(cloneRollerInterval);
-  //     lastPausedTime = Date.now();
-  //     item.classList.add("underline");
-  //   });
+  // 마우스 호버 이벤트
+  rollerItems.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      console.log(`[${rollerSelector}] mouseenter`);
+      clearInterval(newsRollerInterval);
+      clearInterval(cloneRollerInterval);
+      lastPausedTime = Date.now();
+      item.classList.add("underline");
+    });
 
-  //   item.addEventListener("mouseleave", () => {
-  //     const elapsedTime = Date.now() - lastPausedTime;
-  //     const remainingTime = 5000 - (elapsedTime % 5000);
+    item.addEventListener("mouseleave", () => {
+      const elapsedTime = Date.now() - lastPausedTime;
+      const remainingTime = 5000 - (elapsedTime % 5000);
 
-  //     console.log(
-  //       `[${rollerSelector}] mouseleave. 남은 시간: ${remainingTime}ms`
-  //     );
+      console.log(
+        `[${rollerSelector}] mouseleave. 남은 시간: ${remainingTime}ms`
+      );
 
-  //     setTimeout(() => {
-  //       newsRollerInterval = setInterval(newsRoller, 5000);
-  //       cloneRollerInterval = setInterval(() => {
-  //         startRolling(currentRoller);
-  //       }, 5000);
-  //     }, remainingTime);
+      setTimeout(() => {
+        newsRollerInterval = setInterval(newsRoller, 5000);
+        cloneRollerInterval = setInterval(() => {
+          startRolling(currentRoller);
+        }, 5000);
+      }, remainingTime);
 
-  //     item.classList.remove("underline");
-  //   });
-  // });
-
-  const style = document.createElement("style");
-  style.innerHTML = `
-    .underline {
-      text-decoration: underline;
-    }
-  `;
-  document.head.appendChild(style);
+      item.classList.remove("underline");
+    });
+  });
 }

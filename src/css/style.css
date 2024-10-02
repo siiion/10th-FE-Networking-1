@@ -55,19 +55,36 @@ header {
 .news-1-contents {
   position: relative;
   list-style-type: none;
-  width: 100px;
-}
-
-.news-1-contents li {
-  height: 51px;
+  padding-left: 16px;
 }
 
 .news-2-contents {
   position: relative;
   list-style-type: none;
-  width: 100px;
+  padding-left: 16px;
 }
 
-.news-2-contents li {
+li {
   height: 51px;
+}
+
+.press {
+  color: #14212b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headline {
+  color: #5f6e76;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 16px;
+}
+
+.underline {
+  text-decoration: underline;
 }
