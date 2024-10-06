@@ -3,16 +3,15 @@
  *
  * @async
  * @function fetchRollerData
- * @param {string} jsonFile - json 파일의 경로
  * @param {string} selector - 데이터를 삽입할 ul 요소
  * @param {string} key - json 데이터의 키를 선택
  * @throws {Error} - 네트워크 에러
  * @returns {Promise<void>} - json 데이터를 가져와 철리하는 비동기 함수
  *
  */
-export async function fetchRollerData(jsonFile, selector, key) {
+export async function fetchRollerData(selector, key) {
   try {
-    const response = await fetch(`../data/${jsonFile}`);
+    const response = await fetch(`/src/assets/data/rollerData.json`);
     if (!response.ok) {
       throw new Error("네트워크 응답에 문제가 있습니다.");
     }
