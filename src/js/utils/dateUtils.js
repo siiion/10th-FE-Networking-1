@@ -1,3 +1,7 @@
+/**
+ *
+ * @returns - 시스템 시간 (yyyy. mm. dd. -요일)
+ */
 export function getFormattedDate() {
   const currentDate = new Date();
 

@@ -4,6 +4,7 @@ import { createRoller } from "./components/rollerComponent.js";
 
 document.getElementById("current-date").textContent = getFormattedDate();
 
+// 자동 롤링 배너 초기화
 async function initRoller() {
   try {
     await fetchRollerData("#news-1-contents", "news1");

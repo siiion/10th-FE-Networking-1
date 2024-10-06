@@ -1,3 +1,9 @@
+/**
+ * 자동 롤링 배너 구현
+ *
+ * @param {String} rollerSelector - 롤링 적용할 ul 요소
+ * @param {int} delay - 딜레이 시간
+ */
 export function createRoller(rollerSelector, delay = 0) {
   const roller = document.querySelector(rollerSelector);
   const listItems = roller.querySelectorAll("li");
@@ -38,10 +44,12 @@ export function createRoller(rollerSelector, delay = 0) {
     }, 5000);
   }
 
+  // 롤링 일시 정지
   function pauseRolling() {
     clearInterval(rollerInterval);
   }
 
+  // 롤링 재개
   function resumeRolling() {
     startRolling();
   }

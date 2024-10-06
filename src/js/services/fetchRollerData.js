@@ -1,12 +1,8 @@
 /**
- * 자동 롤링 영역에 json 데이터를 fetch 하는 함수
+ * 자동 롤링 영역에 json 데이터 불러오기
  *
- * @async
- * @function fetchRollerData
  * @param {string} selector - 데이터를 삽입할 ul 요소
- * @param {string} key - json 데이터의 키를 선택
- * @throws {Error} - 네트워크 에러
- * @returns {Promise<void>} - json 데이터를 가져와 철리하는 비동기 함수
+ * @param {string} key - json 데이터의 키
  *
  */
 export async function fetchRollerData(selector, key) {
