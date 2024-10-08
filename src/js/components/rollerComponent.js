@@ -10,11 +10,13 @@ export function createRoller(rollerSelector, delay = 0) {
   let currentIndex = 0;
   let rollerInterval;
 
-  if (listItems.length > 0) {
+  // 데이터가 존재하는 지 확인
+  if (listItems.length >= 1) {
     listItems[0].classList.add("current");
-    if (listItems.length > 1) {
-      listItems[1].classList.add("next");
-    }
+    listItems[1].classList.add("next");
+  } else {
+    console.warn("데이터 없음");
+    return;
   }
 
   function startRolling() {
