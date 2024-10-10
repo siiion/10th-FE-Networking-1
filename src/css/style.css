@@ -102,3 +102,41 @@ header {
 .underline {
   text-decoration: underline;
 }
+
+#tab-and-viewer {
+  width: 930px;
+  height: 24px;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#tab-btn {
+  width: 216px;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active-tab {
+  color: #14212b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inactive-tab {
+  color: #879298;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+#viewer-btn {
+  width: 56px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
