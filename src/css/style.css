@@ -110,7 +110,6 @@ header {
   margin-top: 32px;
   margin-bottom: 24px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -139,4 +138,67 @@ header {
   height: 24px;
   display: flex;
   justify-content: space-between;
+}
+
+#field-tab {
+  width: 930px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  border: 1px solid #d2dae0;
+  background-color: #f5f7f9;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.category-text {
+  color: #879298;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.category-text:hover {
+  text-decoration: underline;
+}
+
+.progress-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+  z-index: 1;
+}
+
+.active-category {
+  width: 15%;
+  background-color: #7890e7;
+}
+
+.active-category .category-text {
+  color: #fff;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.active-category .progress-text {
+  display: inline;
+  z-index: 1;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #4362d0;
+  z-index: 0;
+  transition: width linear;
 }

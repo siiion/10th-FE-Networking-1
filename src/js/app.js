@@ -4,10 +4,12 @@ import { createListItems } from "./components/listItemCreator.js";
 import { createRoller } from "./components/rollerComponent.js";
 import { initTabSwitcher } from "./components/tabSwitcher.js";
 import { initViewerSwitcher } from "./components/viewerSwitcher.js";
+import { initCategorySwitcher } from "./components/categorySwitcher.js";
 
 document.getElementById("current-date").textContent = getFormattedDate();
 initTabSwitcher();
 initViewerSwitcher();
+initCategorySwitcher();
 
 // 자동 롤링 배너 초기화
 async function initRoller() {

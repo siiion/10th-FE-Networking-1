@@ -1,10 +1,9 @@
+/**
+ * 그리드 보기 / 리스트 보기 선택 기능
+ */
 export function initViewerSwitcher() {
   const listViewIcon = document.querySelector(`#list-view-icon`);
   const gridViewIcon = document.querySelector(`#grid-view-icon`);
-
-  // 초기 설정 (그리드 뷰 활성화)
-  listViewIcon.src = "src/assets/images/inactive-list-view.png";
-  gridViewIcon.src = "src/assets/images/active-grid-view.png";
 
   listViewIcon.addEventListener("click", () => {
     listViewIcon.src = "src/assets/images/active-list-view.png";
