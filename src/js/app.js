@@ -4,11 +4,26 @@ import { createListItems } from "./components/listItemCreator.js";
 import { createRoller } from "./components/rollerComponent.js";
 import { initTabSwitcher } from "./components/tabSwitcher.js";
 import { initViewerSwitcher } from "./components/viewerSwitcher.js";
+import { generateCategory } from "./components/categoryGenerator.js";
 import { initCategorySwitcher } from "./components/categorySwitcher.js";
 
 document.getElementById("current-date").textContent = getFormattedDate();
 initTabSwitcher();
 initViewerSwitcher();
+
+// 카테고리 바 생성
+const categories = [
+  "종합/경제",
+  "방송/통신",
+  "IT",
+  "영자지",
+  "스포츠/연예",
+  "매거진/전문지",
+  "지역",
+];
+
+generateCategory(categories, "#field-tab");
+
 initCategorySwitcher();
 
 // 자동 롤링 배너 초기화
