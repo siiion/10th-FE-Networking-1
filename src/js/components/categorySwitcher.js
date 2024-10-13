@@ -1,6 +1,6 @@
-import { updateProgressBar } from "./progressUpdater.js";
+import { startProgressBarAnimation } from "./progressUpdater.js";
 
-// 카테고리 전환 기능 초기화, 각 카테고리의 애니메이션 및 클릭 이벤트 설정
+// 카테고리 전환 기능 초기화
 export function initCategorySwitcher() {
   const categories = document.querySelectorAll("#field-tab .category");
   let currentIndex = 0;
@@ -13,6 +13,7 @@ export function initCategorySwitcher() {
 
   // 다음 카테고리로 전환, 프로그레스 바 애니메이션 설정
   const switchToNextCategory = () => {
+    // 모든 카테고리 초기화
     categories.forEach((category) => {
       category.classList.remove("active-category");
       category.querySelector(".progress-bar")?.remove();
@@ -34,16 +35,20 @@ export function initCategorySwitcher() {
 
     progressBar.style.width = "0%";
 
-    // 다음 카테고리로 전환
+    // 애니메이션 시작
     clearInterval(progressInterval);
-    progressInterval = updateProgressBar(progressBar, newsDisplayTime, () => {
-      currentNewsIndex++;
-      if (currentNewsIndex > totalNewsPerCategory) {
-        currentNewsIndex = 1;
-        currentIndex = (currentIndex + 1) % totalCategories;
+    progressInterval = startProgressBarAnimation(
+      progressBar,
+      newsDisplayTime,
+      () => {
+        currentNewsIndex++;
+        if (currentNewsIndex > totalNewsPerCategory) {
+          currentNewsIndex = 1;
+          currentIndex = (currentIndex + 1) % totalCategories;
+        }
+        switchToNextCategory();
       }
-      switchToNextCategory();
-    });
+    );
   };
 
   // 각 카테고리에 클릭 이벤트 추가
