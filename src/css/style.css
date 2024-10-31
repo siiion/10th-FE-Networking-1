@@ -140,6 +140,24 @@ header {
   justify-content: space-between;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#left-button {
+  height: 40px;
+  margin-top: 200px;
+  margin-right: 47px;
+}
+
+#right-button {
+  height: 40px;
+  margin-top: 200px;
+  margin-left: 47px;
+}
+
 #field-tab {
   width: 930px;
   height: 40px;
@@ -201,4 +219,99 @@ header {
   background-color: #4362d0;
   z-index: 0;
   transition: width linear;
+}
+
+#press-news {
+  width: 882px;
+  height: 300px;
+  border: 1px solid #d2dae0;
+  border-top: none;
+  padding: 24px;
+  margin: auto;
+}
+
+#press-info {
+  display: flex;
+  width: 882px;
+  height: 24px;
+  margin: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+#brand-mark {
+  width: 52.5px;
+  height: 20px;
+  padding-right: 0.5px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-date {
+  color: #5f6e76;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#subscribe-button {
+  height: 24px;
+  margin-left: 16px;
+}
+
+#news {
+  display: flex;
+  flex-direction: row;
+  width: 882px;
+  height: 260px;
+  margin-top: 16px;
+}
+
+#main-news {
+  display: flex;
+  width: 320px;
+  height: 260px;
+  margin-right: 32px;
+  flex-direction: column;
+}
+
+#main-thumbnail {
+  width: 320px;
+  height: 200px;
+  border: 1px solid #d2dae0;
+  margin-bottom: 16px;
+}
+
+#main-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #14212b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+#sub-news {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 530px;
+  height: 245px;
+}
+
+.sub-title {
+  color: #4b5966;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+
+#caption {
+  color: #879298;
+  font-size: 14px;
+  font-weight: 500;
 }
